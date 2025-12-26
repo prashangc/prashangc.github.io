@@ -174,6 +174,6 @@ GitHub Pages requires the repository to be named `username.github.io` for root d
 
 ## 🤝 Contact
 
-- Email: prashangc@gmail.com
-- LinkedIn: [linkedin.com/in/prashangc](https://linkedin.com/in/prashangc)
+- Email: prashannagc11@gmail.com
+- LinkedIn: [linkedin.com/in/prashangc](https://www.linkedin.com/in/prashan-gc-074ab618b/)
 - GitHub: [github.com/prashangc](https://github.com/prashangc)
