@@ -12,7 +12,7 @@ import 'package:media_source/media_source.dart';
 
 class ResumeData {
   static final profile = LinkedInProfile(
-    firstName: 'Prashan',
+    firstName: 'Prashanna',
     lastName: 'GC',
     title: 'Flutter Developer',
     subtitle:
