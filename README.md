@@ -4,11 +4,11 @@ A modern, responsive CV/Portfolio website built with Flutter Web.
 
 ## 🌐 Live Demo
 
-Visit the live website at: [https://hossameldinmi.github.io](https://hossameldinmi.github.io)
+Visit the live website at: [https://prashangc.github.io](https://prashangc.github.io)
 
 ## ⚠️ Important: Repository Name for Root Domain Deployment
 
-**To deploy your website at the root domain** (`https://hossameldinmi.github.io/`) **instead of a subdirectory** (`https://hossameldinmi.github.io/website/`), **you must rename this repository to `hossameldinmi.github.io`**.
+**To deploy your website at the root domain** (`https://prashangc.github.io/`) **instead of a subdirectory** (`https://prashangc.github.io/website/`), **you must rename this repository to `prashangc.github.io`**.
 
 ### Why is this necessary?
 
@@ -21,11 +21,11 @@ GitHub Pages has two types of sites:
 1. Go to your repository on GitHub
 2. Click **Settings** (top menu)
 3. Scroll to **Repository name** section
-4. Change the name from `website` to `hossameldinmi.github.io`
+4. Change the name from `website` to `prashangc.github.io`
 5. Click **Rename**
 6. Run `./update-after-rename.sh` to update your local repository
 
-After renaming, your site will automatically deploy to `https://hossameldinmi.github.io/` instead of `https://hossameldinmi.github.io/website/`.
+After renaming, your site will automatically deploy to `https://prashangc.github.io/` instead of `https://prashangc.github.io/website/`.
 
 > **Note**: The current configuration (`--base-href "/"`) is already set correctly for root domain deployment. No code changes are needed - only the repository rename!
 
@@ -142,9 +142,9 @@ web/
 
 ### Site deployed to `/website/` path instead of root domain
 
-**Problem**: Your site is accessible at `https://hossameldinmi.github.io/website/` instead of `https://hossameldinmi.github.io/`
+**Problem**: Your site is accessible at `https://prashangc.github.io/website/` instead of `https://prashangc.github.io/`
 
-**Solution**: Rename your repository from `website` to `hossameldinmi.github.io`
+**Solution**: Rename your repository from `website` to `prashangc.github.io`
 
 GitHub Pages requires the repository to be named `username.github.io` for root domain deployment. See the [Repository Name section](#%EF%B8%8F-important-repository-name-for-root-domain-deployment) above for detailed instructions.
 
@@ -174,6 +174,6 @@ GitHub Pages requires the repository to be named `username.github.io` for root d
 
 ## 🤝 Contact
 
-- Email: hossameldinmi@gmail.com
-- LinkedIn: [linkedin.com/in/hossameldinmi](https://linkedin.com/in/hossameldinmi)
-- GitHub: [github.com/hossameldinmi](https://github.com/hossameldinmi)
+- Email: prashangc@gmail.com
+- LinkedIn: [linkedin.com/in/prashangc](https://linkedin.com/in/prashangc)
+- GitHub: [github.com/prashangc](https://github.com/prashangc)

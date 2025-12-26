@@ -1,7 +1,7 @@
 # Quick Fix: Website Deployment Path Issue
 
 ## Problem
-Your website is being deployed to `https://hossameldinmi.github.io/website/` instead of `https://hossameldinmi.github.io/`
+Your website is being deployed to `https://prashangc.github.io/website/` instead of `https://prashangc.github.io/`
 
 ## Root Cause
 GitHub Pages serves websites differently based on repository naming:
@@ -13,9 +13,9 @@ Your repository is currently named `website`, so GitHub Pages deploys it to the 
 ## Solution (2 Simple Steps)
 
 ### Step 1: Rename Repository on GitHub
-1. Visit: https://github.com/hossameldinmi/website/settings
+1. Visit: https://github.com/prashangc/website/settings
 2. Find "Repository name" section
-3. Change from `website` to `hossameldinmi.github.io`
+3. Change from `website` to `prashangc.github.io`
 4. Click "Rename"
 
 ### Step 2: Update Local Repository
@@ -24,7 +24,7 @@ Run this command in your terminal:
 ./update-after-rename.sh
 ```
 
-That's it! Your site will now deploy to `https://hossameldinmi.github.io/`
+That's it! Your site will now deploy to `https://prashangc.github.io/`
 
 ## Important Notes
 - ✅ Your configuration is already correct (`--base-href "/"`)
@@ -41,4 +41,4 @@ If you want to keep the repository name as `website`, you can instead update the
 - `.github/workflows/deploy.yml` (line 35)
 - `deploy.sh` (line 26)
 
-However, this means your site will remain at `https://hossameldinmi.github.io/website/`
+However, this means your site will remain at `https://prashangc.github.io/website/`

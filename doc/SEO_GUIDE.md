@@ -36,9 +36,9 @@
 
 #### Google Search Console
 1. Visit: https://search.google.com/search-console
-2. Add property: `https://hossameldinmi.github.io`
+2. Add property: `https://prashangc.github.io`
 3. Verify ownership (HTML file or DNS)
-4. Submit sitemap: `https://hossameldinmi.github.io/sitemap.xml`
+4. Submit sitemap: `https://prashangc.github.io/sitemap.xml`
 5. Request indexing for main page
 
 #### Bing Webmaster Tools
@@ -135,13 +135,13 @@ https://www.linkedin.com/post-inspector/
 
 ### Test Mobile Friendliness
 ```bash
-https://search.google.com/test/mobile-friendly?url=https://hossameldinmi.github.io/
+https://search.google.com/test/mobile-friendly?url=https://prashangc.github.io/
 ```
 
 ## Monitoring Commands
 ```bash
 # Check if site is indexed
-site:hossameldinmi.github.io
+site:prashangc.github.io
 
 # Check specific keywords
 "Hossam Eldin Mahmoud" mobile engineer
@@ -173,8 +173,8 @@ site:hossameldinmi.github.io
    - Analyze popular pages
 
 ## Quick Reference
-- **Site URL**: https://hossameldinmi.github.io/
-- **Sitemap**: https://hossameldinmi.github.io/sitemap.xml
-- **Robots.txt**: https://hossameldinmi.github.io/robots.txt
-- **LinkedIn**: https://linkedin.com/in/hossameldinmi
-- **GitHub**: https://github.com/hossameldinmi
+- **Site URL**: https://prashangc.github.io/
+- **Sitemap**: https://prashangc.github.io/sitemap.xml
+- **Robots.txt**: https://prashangc.github.io/robots.txt
+- **LinkedIn**: https://linkedin.com/in/prashangc
+- **GitHub**: https://github.com/prashangc

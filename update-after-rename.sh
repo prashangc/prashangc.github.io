@@ -6,7 +6,7 @@
 # Usage: ./update-after-rename.sh
 #
 # This script should be run AFTER renaming the repository on GitHub 
-# from "website" to "hossameldinmi.github.io"
+# from "website" to "prashangc.github.io"
 #
 # What it does:
 # - Prompts for confirmation that GitHub rename is complete
@@ -23,10 +23,10 @@ echo ""
 echo "⚠️  IMPORTANT: This script assumes you have already renamed the repository on GitHub!"
 echo ""
 echo "Steps to rename repository on GitHub:"
-echo "1. Go to: https://github.com/hossameldinmi/website"
+echo "1. Go to: https://github.com/prashangc/website"
 echo "2. Click 'Settings' in the top menu"
 echo "3. Find 'Repository name' section"
-echo "4. Change name from 'website' to 'hossameldinmi.github.io'"
+echo "4. Change name from 'website' to 'prashangc.github.io'"
 echo "5. Click 'Rename'"
 echo ""
 read -p "Have you completed the rename on GitHub? (y/n) " -n 1 -r

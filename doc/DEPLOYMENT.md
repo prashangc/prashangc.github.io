@@ -5,16 +5,16 @@
 GitHub Pages serves websites differently based on the repository name:
 
 ### User/Organization Site (Root Domain)
-- **Repository Name**: Must be `username.github.io` (e.g., `hossameldinmi.github.io`)
+- **Repository Name**: Must be `username.github.io` (e.g., `prashangc.github.io`)
 - **URL**: `https://username.github.io/`
 - **Base Href**: `/`
-- **Example**: `https://hossameldinmi.github.io/`
+- **Example**: `https://prashangc.github.io/`
 
 ### Project Site (Subdirectory)
 - **Repository Name**: Any name (e.g., `website`, `portfolio`, `my-app`)
 - **URL**: `https://username.github.io/repository-name/`
 - **Base Href**: `/repository-name/`
-- **Example**: `https://hossameldinmi.github.io/website/`
+- **Example**: `https://prashangc.github.io/website/`
 
 ## Current Configuration
 
@@ -22,18 +22,18 @@ This project is currently configured for **root domain deployment**:
 
 - **Base Href in Workflow**: `--base-href "/"`
 - **Base Href in Deploy Script**: `--base-href "/"`
-- **Expected URL**: `https://hossameldinmi.github.io/`
+- **Expected URL**: `https://prashangc.github.io/`
 
 ## How to Deploy at Root Domain
 
-To deploy your site at the root domain (`https://hossameldinmi.github.io/`), follow these steps:
+To deploy your site at the root domain (`https://prashangc.github.io/`), follow these steps:
 
 ### Step 1: Rename the Repository
 
-1. Go to your repository on GitHub: `https://github.com/hossameldinmi/website`
+1. Go to your repository on GitHub: `https://github.com/prashangc/website`
 2. Click **Settings** in the top menu
 3. In the **General** section, find **Repository name**
-4. Change the name from `website` to `hossameldinmi.github.io`
+4. Change the name from `website` to `prashangc.github.io`
 5. Click **Rename** button
 6. Confirm the rename
 
@@ -49,7 +49,7 @@ After renaming on GitHub, update your local repository:
 **Option 2: Manual update**
 ```bash
 # Update the remote URL
-git remote set-url origin https://github.com/hossameldinmi/hossameldinmi.github.io.git
+git remote set-url origin https://github.com/prashangc/prashangc.github.io.git
 
 # Verify the change
 git remote -v
@@ -59,11 +59,11 @@ git remote -v
 
 1. Push any change to trigger deployment (or manually trigger workflow)
 2. Go to **Actions** tab and wait for workflow to complete
-3. Visit `https://hossameldinmi.github.io/` - your site should be live!
+3. Visit `https://prashangc.github.io/` - your site should be live!
 
 ## Alternative: Deploy to Project Path
 
-If you prefer to keep the repository name as `website` and deploy to `https://hossameldinmi.github.io/website/`:
+If you prefer to keep the repository name as `website` and deploy to `https://prashangc.github.io/website/`:
 
 ### Option 1: Update Build Configuration
 
@@ -90,7 +90,7 @@ If you own a custom domain (e.g., `example.com`):
    ```
 
 2. Configure your domain's DNS:
-   - Add a `CNAME` record pointing to `hossameldinmi.github.io`
+   - Add a `CNAME` record pointing to `prashangc.github.io`
    - Or add `A` records pointing to GitHub Pages IPs
 
 3. In GitHub repository settings:
@@ -104,7 +104,7 @@ If you own a custom domain (e.g., `example.com`):
 
 After making changes, verify:
 
-- [ ] Repository is renamed to `hossameldinmi.github.io` (for root domain)
+- [ ] Repository is renamed to `prashangc.github.io` (for root domain)
 - [ ] Base href in `.github/workflows/deploy.yml` matches your deployment path
 - [ ] Base href in `deploy.sh` matches your deployment path
 - [ ] GitHub Pages is enabled in repository settings

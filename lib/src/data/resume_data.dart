@@ -55,7 +55,7 @@ class ResumeData {
       email: 'prashannagc11@gmail.com',
       linkedinUrl: 'https://www.linkedin.com/in/prashan-gc-074ab618b/',
       githubUrl: 'https://github.com/prashangc',
-      websiteUrl: 'https://hossameldinmi.github.io',
+      websiteUrl: 'https://prashangc.github.io',
       phone: PhoneNumber(
         countryCode: '+977',
         number: '9840308344',
