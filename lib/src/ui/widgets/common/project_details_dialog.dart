@@ -301,186 +301,184 @@ class _ProjectDetailsDialogState extends State<ProjectDetailsDialog>
   Widget _detailsView() {
     final theme = Theme.of(context);
     final isDark = theme.brightness == Brightness.dark;
-    return Flexible(
-      child: SingleChildScrollView(
-        padding: const EdgeInsets.all(24),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Description
+    return SingleChildScrollView(
+      padding: const EdgeInsets.all(24),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Description
+          Text(
+            widget.project.description,
+            style: GoogleFonts.roboto(
+              fontSize: ResponsiveUtils.getResponsiveFontSize(context, 16),
+              height: 1.6,
+              color: theme.textTheme.bodyMedium?.color,
+            ),
+          ),
+          const SizedBox(height: 32),
+          // Media Links
+          if (widget.project.media.isNotEmpty) ...[
             Text(
-              widget.project.description,
+              'Available On',
               style: GoogleFonts.roboto(
-                fontSize: ResponsiveUtils.getResponsiveFontSize(context, 16),
-                height: 1.6,
-                color: theme.textTheme.bodyMedium?.color,
+                fontSize: ResponsiveUtils.getResponsiveFontSize(context, 18),
+                fontWeight: FontWeight.bold,
+                color: theme.textTheme.displayLarge?.color,
               ),
             ),
-            const SizedBox(height: 32),
-            // Media Links
-            if (widget.project.media.isNotEmpty) ...[
-              Text(
-                'Available On',
-                style: GoogleFonts.roboto(
-                  fontSize: ResponsiveUtils.getResponsiveFontSize(context, 18),
-                  fontWeight: FontWeight.bold,
-                  color: theme.textTheme.displayLarge?.color,
-                ),
-              ),
-              const SizedBox(height: 16),
-              Wrap(
-                spacing: 12,
-                runSpacing: 12,
-                children: widget.project.media.map((media) {
-                  return InkWell(
-                    onTap: () {
-                      if (media.media is UrlMedia) {
-                        _launchURL((media.media as UrlMedia).uri.toString());
-                      }
-                    },
-                    borderRadius: BorderRadius.circular(8),
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 16, vertical: 12),
-                      decoration: BoxDecoration(
-                        color: theme.cardColor,
-                        borderRadius: BorderRadius.circular(8),
-                        border: Border.all(
-                          color: isDark
-                              ? const Color(0xFF233554)
-                              : const Color(0xFFE2E8F0),
-                          width: 1,
-                        ),
-                      ),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Icon(
-                            _getMediaIcon(media),
-                            size: 20,
-                            color: theme.colorScheme.primary,
-                          ),
-                          const SizedBox(width: 8),
-                          Text(
-                            _getMediaLabel(media),
-                            style: GoogleFonts.roboto(
-                              fontSize: 14,
-                              color: theme.textTheme.bodyMedium?.color,
-                            ),
-                          ),
-                          const SizedBox(width: 4),
-                          Icon(
-                            Icons.open_in_new,
-                            size: 14,
-                            color: theme.textTheme.bodyMedium?.color
-                                ?.withOpacity(0.5),
-                          ),
-                        ],
-                      ),
-                    ),
-                  );
-                }).toList(),
-              ),
-              const SizedBox(height: 32),
-            ],
-            // Skills
-            if (widget.project.skills.isNotEmpty) ...[
-              Text(
-                'Technologies & Skills',
-                style: GoogleFonts.roboto(
-                  fontSize: ResponsiveUtils.getResponsiveFontSize(context, 18),
-                  fontWeight: FontWeight.bold,
-                  color: theme.textTheme.displayLarge?.color,
-                ),
-              ),
-              const SizedBox(height: 16),
-              Wrap(
-                spacing: 8,
-                runSpacing: 8,
-                children: widget.project.skills.map((skill) {
-                  return Container(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+            const SizedBox(height: 16),
+            Wrap(
+              spacing: 12,
+              runSpacing: 12,
+              children: widget.project.media.map((media) {
+                return InkWell(
+                  onTap: () {
+                    if (media.media is UrlMedia) {
+                      _launchURL((media.media as UrlMedia).uri.toString());
+                    }
+                  },
+                  borderRadius: BorderRadius.circular(8),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 16, vertical: 12),
                     decoration: BoxDecoration(
-                      color: theme.colorScheme.primary.withOpacity(0.1),
-                      borderRadius: BorderRadius.circular(20),
+                      color: theme.cardColor,
+                      borderRadius: BorderRadius.circular(8),
                       border: Border.all(
-                        color: theme.colorScheme.primary.withOpacity(0.3),
+                        color: isDark
+                            ? const Color(0xFF233554)
+                            : const Color(0xFFE2E8F0),
                         width: 1,
                       ),
                     ),
-                    child: Text(
-                      skill.name,
-                      style: GoogleFonts.firaCode(
-                        fontSize: 13,
-                        color: theme.colorScheme.primary,
-                      ),
-                    ),
-                  );
-                }).toList(),
-              ),
-              const SizedBox(height: 32),
-            ],
-            // Experiences
-            if (widget.project.experiences.isNotEmpty) ...[
-              Text(
-                'Related Experience',
-                style: GoogleFonts.roboto(
-                  fontSize: ResponsiveUtils.getResponsiveFontSize(context, 18),
-                  fontWeight: FontWeight.bold,
-                  color: theme.textTheme.displayLarge?.color,
-                ),
-              ),
-              const SizedBox(height: 16),
-              ...widget.project.experiences.map((experience) {
-                return Padding(
-                  padding: const EdgeInsets.only(bottom: 8),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.work_outline,
-                        size: 16,
-                        color:
-                            theme.textTheme.bodyMedium?.color?.withOpacity(0.7),
-                      ),
-                      const SizedBox(width: 8),
-                      Expanded(
-                        child: RichText(
-                          text: TextSpan(
-                            style: GoogleFonts.roboto(
-                              fontSize: 14,
-                              color: theme.textTheme.bodyMedium?.color,
-                            ),
-                            children: [
-                              TextSpan(
-                                text: experience.title,
-                                style: const TextStyle(
-                                    fontWeight: FontWeight.w500),
-                              ),
-                              TextSpan(
-                                text: ' at ',
-                                style: TextStyle(
-                                  color: theme.textTheme.bodyMedium?.color
-                                      ?.withOpacity(0.6),
-                                ),
-                              ),
-                              TextSpan(
-                                text: experience.company.name,
-                                style: TextStyle(
-                                  color: theme.colorScheme.primary,
-                                ),
-                              ),
-                            ],
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(
+                          _getMediaIcon(media),
+                          size: 20,
+                          color: theme.colorScheme.primary,
+                        ),
+                        const SizedBox(width: 8),
+                        Text(
+                          _getMediaLabel(media),
+                          style: GoogleFonts.roboto(
+                            fontSize: 14,
+                            color: theme.textTheme.bodyMedium?.color,
                           ),
                         ),
-                      ),
-                    ],
+                        const SizedBox(width: 4),
+                        Icon(
+                          Icons.open_in_new,
+                          size: 14,
+                          color: theme.textTheme.bodyMedium?.color
+                              ?.withOpacity(0.5),
+                        ),
+                      ],
+                    ),
                   ),
                 );
-              }),
-            ],
+              }).toList(),
+            ),
+            const SizedBox(height: 32),
           ],
-        ),
+          // Skills
+          if (widget.project.skills.isNotEmpty) ...[
+            Text(
+              'Technologies & Skills',
+              style: GoogleFonts.roboto(
+                fontSize: ResponsiveUtils.getResponsiveFontSize(context, 18),
+                fontWeight: FontWeight.bold,
+                color: theme.textTheme.displayLarge?.color,
+              ),
+            ),
+            const SizedBox(height: 16),
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: widget.project.skills.map((skill) {
+                return Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                  decoration: BoxDecoration(
+                    color: theme.colorScheme.primary.withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(
+                      color: theme.colorScheme.primary.withOpacity(0.3),
+                      width: 1,
+                    ),
+                  ),
+                  child: Text(
+                    skill.name,
+                    style: GoogleFonts.firaCode(
+                      fontSize: 13,
+                      color: theme.colorScheme.primary,
+                    ),
+                  ),
+                );
+              }).toList(),
+            ),
+            const SizedBox(height: 32),
+          ],
+          // Experiences
+          if (widget.project.experiences.isNotEmpty) ...[
+            Text(
+              'Related Experience',
+              style: GoogleFonts.roboto(
+                fontSize: ResponsiveUtils.getResponsiveFontSize(context, 18),
+                fontWeight: FontWeight.bold,
+                color: theme.textTheme.displayLarge?.color,
+              ),
+            ),
+            const SizedBox(height: 16),
+            ...widget.project.experiences.map((experience) {
+              return Padding(
+                padding: const EdgeInsets.only(bottom: 8),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.work_outline,
+                      size: 16,
+                      color:
+                          theme.textTheme.bodyMedium?.color?.withOpacity(0.7),
+                    ),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: RichText(
+                        text: TextSpan(
+                          style: GoogleFonts.roboto(
+                            fontSize: 14,
+                            color: theme.textTheme.bodyMedium?.color,
+                          ),
+                          children: [
+                            TextSpan(
+                              text: experience.title,
+                              style:
+                                  const TextStyle(fontWeight: FontWeight.w500),
+                            ),
+                            TextSpan(
+                              text: ' at ',
+                              style: TextStyle(
+                                color: theme.textTheme.bodyMedium?.color
+                                    ?.withOpacity(0.6),
+                              ),
+                            ),
+                            TextSpan(
+                              text: experience.company.name,
+                              style: TextStyle(
+                                color: theme.colorScheme.primary,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            }),
+          ],
+        ],
       ),
     );
   }
