@@ -42,7 +42,7 @@ class _CVWebsiteState extends State<CVWebsite> {
           displayColor: const Color(0xFFE2E8F0), // Brighter white
         ),
         colorScheme: const ColorScheme.dark(
-          primary: Color(0xFF00FFC8), // More vibrant teal
+          primary: Color(0xFF00FFC8),
           secondary: Color(0xFF00FFC8),
           surface: Color(0xFF112240),
         ),
