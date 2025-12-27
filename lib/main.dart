@@ -21,7 +21,6 @@ class _CVWebsiteState extends State<CVWebsite> {
   void _toggleTheme() {
     setState(() {
       if (_themeMode == ThemeMode.system) {
-        // Get current system brightness to toggle correctly from system mode
         final brightness =
             WidgetsBinding.instance.platformDispatcher.platformBrightness;
         _themeMode =
