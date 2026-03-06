@@ -10,7 +10,10 @@ class Experiences {
     title: 'Flutter Developer',
     locationType: 'Remote',
     employmentType: 'Full-time',
-    dateRange: DateRange(start: DateTime(2024, 11), end: DateTime(2025, 7)),
+    dateRange: DateRange(
+      start: DateTime(2025, 1),
+      end: DateTime.now(),
+    ),
     description:
         '''𝑲𝒆𝒚 𝑹𝒆𝒔𝒑𝒐𝒏𝒔𝒊𝒃𝒊𝒍𝒊𝒕𝒊𝒆𝒔:\n• Developed scalable Flutter applications for HR, healthcare, and restaurant management systems
 • Implemented employee attendance, check-in/check-out, and background location tracking features
@@ -35,7 +38,10 @@ class Experiences {
     title: 'Flutter Developer',
     locationType: 'Onsite',
     employmentType: 'Full-time',
-    dateRange: DateRange(start: DateTime(2024, 3), end: DateTime(2024, 9)),
+    dateRange: DateRange(
+      start: DateTime(2024, 4),
+      end: DateTime(2024, 9),
+    ),
     description:
         '''𝑲𝒆𝒚 𝑹𝒆𝒔𝒑𝒐𝒏𝒔𝒊𝒃𝒊𝒍𝒊𝒕𝒊𝒆𝒔:\n• Collaborated with cross-functional Agile teams to deliver features on schedule
 • Developed and maintained Flutter applications following clean coding practices
@@ -69,7 +75,10 @@ class Experiences {
     title: 'Flutter Developer',
     locationType: 'Onsite',
     employmentType: 'Full-time',
-    dateRange: DateRange(start: DateTime(2022, 4), end: DateTime(2024, 2)),
+    dateRange: DateRange(
+      start: DateTime(2022, 4),
+      end: DateTime(2024, 3),
+    ),
     description:
         '''𝑲𝒆𝒚 𝑹𝒆𝒔𝒑𝒐𝒏𝒔𝒊𝒃𝒊𝒍𝒊𝒕𝒊𝒆𝒔:\n• Designed and developed complete Flutter applications from concept to deployment
 • Created independent UI/UX designs focused on usability and user experience
@@ -94,7 +103,10 @@ class Experiences {
     title: 'Flutter Intern',
     locationType: 'Onsite',
     employmentType: 'Contract',
-    dateRange: DateRange(start: DateTime(2022, 1), end: DateTime(2022, 3)),
+    dateRange: DateRange(
+      start: DateTime(2022, 1),
+      end: DateTime(2022, 3),
+    ),
     description:
         '''𝑲𝒆𝒚 𝑹𝒆𝒔𝒑𝒐𝒏𝒔𝒊𝒃𝒊𝒍𝒊𝒕𝒊𝒆𝒔:\n• Assisted in developing and testing Flutter mobile applications using Dart
 • Implemented UI components based on design requirements
