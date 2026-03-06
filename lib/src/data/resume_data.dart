@@ -49,7 +49,7 @@ class ResumeData {
     ),
     location: 'Kathmandu, Nepal',
     resume: DocumentNetworkMedia.url(
-      'https://drive.google.com/file/d/156LTZxyhZ9TaUWYfRt-0JeacR4gx4hTD/view?usp=sharing',
+      'https://drive.google.com/file/d/1T8L7SpM3IQTsH9u8u4-qCvBmFswKkTH8/view?usp=sharing',
     ),
     contact: const Contact(
       email: 'prashannagc11@gmail.com',
