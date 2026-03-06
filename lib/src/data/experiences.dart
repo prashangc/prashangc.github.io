@@ -12,7 +12,7 @@ class Experiences {
     employmentType: 'Full-time',
     dateRange: DateRange(
       start: DateTime(2025, 1),
-      end: DateTime.now(),
+      end: DateTime(2025, 12),
     ),
     description:
         '''𝑲𝒆𝒚 𝑹𝒆𝒔𝒑𝒐𝒏𝒔𝒊𝒃𝒊𝒍𝒊𝒕𝒊𝒆𝒔:\n• Developed scalable Flutter applications for HR, healthcare, and restaurant management systems
