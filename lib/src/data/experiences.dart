@@ -5,7 +5,6 @@ import 'package:cv_website/src/models/experience.dart';
 import 'package:media_source/media_source.dart';
 
 class Experiences {
-  // Individual Experience static variables
   static final abgroup = Experience(
     title: 'Flutter Developer',
     locationType: 'Remote',
